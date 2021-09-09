@@ -22,7 +22,10 @@ use craft\helpers\App;
 return [
     'id' => App::env('APP_ID') ?: 'CraftCMS',
     'modules' => [
+        'yelp-api-module' => [
+            'class' => \modules\yelpapimodule\YelpApiModule::class,
+        ],
         'my-module' => \modules\Module::class,
     ],
-    //'bootstrap' => ['my-module'],
+    'bootstrap' => ['yelp-api-module'],
 ];

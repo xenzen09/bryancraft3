@@ -150,32 +150,56 @@
         }
 
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body class="ltr">
 <div id="container">
     <div id="modal">
         <div id="main">
             <div class="content">
-                <h1>Welcome</h1>    
+                <h1>Dev Test</h1>
             </div>
-            {# Create an entry query with the 'section' and 'limit' parameters #}
+
+
+
             {% set myEntryQuery = craft.entries()
                 .section('restaurant')
                 .limit(20) %}
 
-            {# Fetch the entries #}
             {% set entries = myEntryQuery.all() %}
 
-            {# Display the entries #}
             {% for entry in entries %}
                 <article>
                     <h1><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
-                    {{ entry.summary }}
-                    <a href="{{ entry.url }}">Continue reading</a>
+                    <a href="{{ entry.url }}">View</a>
                 </article>
             {% endfor %}
         </div>
     </div>
 </div>
+<script>
+    $( document ).ready(function() {
+        console.log("Test");
+        // $.ajax({
+        //     url: "https://api.yelp.com/v3/businesses/search?term=food&location=45-09+34th+Ave+Long+Island+City+ny+11101&radius=50&price=1,2,3,4",
+        //     headers: {
+        //         "Authorization": "Bearer tJq7sPiVgR9U7PpwN9NB6dENLHot5HIFOgTDhJNbYHimuQIMuGfgcp_SNfwwVxsGx1u6EzQ7JshqvoLu8kGKSpfxVg_YagZs3YYlMUHNgDB0mg4NbZsqlNod1oo5YXYx"
+        //     },
+        //     'cache': true,
+        //     data: {
+        //         'city': "Melbourne",
+        //         'limit': 20,
+        //     },
+        //     dataType: "json",
+        //     success: function (response) {
+        //         var resp = JSON.parse(response)
+        //         console.log(resp.status);
+        //     },
+        //     error: function (xhr, status) {
+        //         console.log(status);
+        //     }
+        // });
+    });
+</script>
 </body>
 </html>
