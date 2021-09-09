@@ -1,0 +1,22 @@
+dateModified: 1631158627
+email:
+  fromEmail: dev.bryanpineda@gmail.com
+  fromName: 'Bryan Craft'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    3d128ea2-f3c4-43c2-9387-d6d3d3ddda14: 'Bryan Craft' # Bryan Craft
+    28cb9747-6d2b-4b07-86da-ad26eff09695: Common # Common
+    930bf084-c4f1-4c18-9480-8d1c6ef7f311: 'Bryan Craft' # Bryan Craft
+system:
+  edition: solo
+  live: true
+  name: 'Bryan Craft'
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
